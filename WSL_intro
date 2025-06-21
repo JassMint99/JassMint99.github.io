@@ -1,0 +1,9 @@
+On Windows 11, WSL can be installed with a simple command: wsl --install. Although you might need to enable Hyper-V, and perhaps do it before the installation, as it will cause the installation to fail.
+To enable Hyper-V on Windows 11 system, open Control Panel, then go to: Programs -> Programs and Features -> Turn Windows features on and off. Scroll to the bottom, and select "Windows Subsystem for Linux". 
+Then restart your computer to enable this config.
+As the system is booted up again, use ```wsl --install``` in your cmd box and wait for the installation to complete.
+A welcome page will pop up after the installation, which includes pretty much what you're need to know. In summary:
+- Windows file are mounted to WSL /mnt folder.
+- WSL root path is accessible on Windows File Explorer, on the left side bar look for "Linux". (I can't quite find a folder that stores the WSL files and OS image in Windows system, although it was possible in Windows 10. More to explore here) 
+- The default Linux distribution is Ubuntu, 24.04. To install another districution, use ```wsl.exe -l -o``` for installable distributions, and then install with ```wsl.exe --install <DistroName>```
+- The disc image is on %LOCALAPPDATA%\wsl\{}
